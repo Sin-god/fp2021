@@ -12,13 +12,9 @@
 --та без їх застосування
 
 --1.1 Знайти k-й справа елемент списку.
-getSecondLastElement :: [a] -> Int  -> a
-getSecondLastElement [] k = error "list is empty"
-getSecondLastElement [x] k = error "list contains only 1 element"
-getSecondLastElement (x:xs) k = helper (x:xs) k 0
-helper (x:xs) k amount
-    | k == amount = x 
-    | otherwise = helper xs k (amount+1)
+funk1 :: Int -> String -> String
+funk1 1 str  = str
+funk1 amount str =  concat $ replicate amount str
     
 
 
